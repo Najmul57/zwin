@@ -1,0 +1,754 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #101213;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #007bff;
+    /* Change the color as needed */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* manu start */
+
+.header__logo img {
+    max-width: 120px;
+    width: 100%;
+    height: 66px;
+    object-fit: cover;
+}
+
+#offcanvas__desktop {
+    background: #101213;
+    padding: 20px;
+}
+
+#offcanvas__desktop ul li a {
+    color: #fff;
+    transition: all .5s ease-in-out;
+    font-size: 18px;
+}
+
+#offcanvas__desktop ul li a:hover {
+    opacity: .8;
+}
+
+#offcanvas__desktop ul li {
+    margin-top: 15px;
+}
+
+.header__top__right button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.header__top__right button.login {
+    background: #A0CF2F;
+}
+
+.header__top__right button.signup {
+    background: #D64E4E;
+}
+
+.header__bottom {
+    background: #22252A;
+}
+
+.main__menu ul li a {
+    display: block;
+    text-transform: capitalize;
+    transition: all .5s ease-in-out;
+    color: #fff;
+    padding: 15px;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.main__menu ul li a i {
+    color: #30d588;
+}
+
+.main__menu ul li:hover>a {
+    color: #4EBA88;
+}
+
+/* manu end */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+/* banner start */
+/* Style for custom dots */
+.custom-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border: 2px solid #333;
+    /* You can adjust the dot styles as needed */
+    border-radius: 50%;
+    margin: 0 5px;
+    /* Adjust the margin to control spacing between dots */
+    cursor: pointer;
+}
+
+/* Position the dots absolutely within banner__area */
+.banner__area {
+    position: relative;
+}
+
+.banner__area .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    /* Adjust the vertical position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.banner__area ul.slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style for custom dots */
+.banner__area ul.slick-dots li button {
+    width: 20px;
+    height: 2px;
+    margin: 0 1px;
+    border-radius: 10px;
+    text-indent: -9999px;
+    background-color: red;
+    /* Set the background color for inactive dots to red */
+}
+
+/* Style for the active dot */
+.banner__area ul.slick-dots li.slick-active button {
+    background-color: blue;
+    /* Set the background color for the active dot to blue */
+}
+
+/* banner end */
+
+/* marquee start */
+marquee.marquee {
+    background: #22252A;
+    padding: 10px 0;
+}
+
+marquee.marquee p {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.marquss__icon i {
+    color: #FFCA00;
+    font-size: 20px;
+}
+
+.marquss__icon {
+    background: #22252A;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* marquee end */
+
+/* game start */
+.single__game {
+    position: relative;
+    display: block;
+}
+
+.game__photo img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.single__game h6 {
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.single__game h6 {
+    color: #fff;
+    background: #000;
+    margin-bottom: 0;
+    border-radius: 0 0 8px 8px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    opacity: .8;
+}
+
+.show__game button {
+    background: #a0cf2f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.show__game {
+    text-align: center;
+}
+
+/* game end */
+
+/* result start */
+.result__slider__active img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.slider-content {
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.single__result {
+    background: #22252A;
+    color: #fff;
+    border-radius: 10px;
+    height: 100%;
+    position: relative;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.slide__content__left {
+    text-align: left;
+}
+
+.slide__content__right:hover button {
+    background: #000
+}
+
+.slide__content__right button {
+    transition: all .5s ease-in-out;
+}
+
+.slide__content__left h6 {
+    margin-bottom: 0;
+}
+
+.single__result button {
+    background: #F4BD29;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.marquee li {
+    animation: marquee .1s linear infinite;
+}
+
+.single__result h6 {
+    font-size: 20px;
+}
+
+.single__result p {
+    padding: 10px 0;
+}
+
+.marquee-bottom_top {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    /* Adjust the height as needed */
+}
+
+.single__result .marquee {
+    position: absolute;
+    bottom: 0;
+    animation: bottom_top 10s linear infinite;
+    width: 100%;
+}
+
+@keyframes bottom_top {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.result__slider__active {
+    height: 100%;
+}
+
+.slick-list.draggable {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.single__item {
+    background: #22252A;
+    color: #fff;
+    width: 110px;
+    border-radius: 10px;
+    min-height: 100px;
+    display: table;
+    height: 100%;
+}
+
+.item__info i {
+    font-size: 20px;
+}
+
+.item__info h6 {
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.item__info {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.slick-track {
+    height: 100%;
+}
+
+.result__left img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.marquee-bottom_top li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.marquee-bottom_top li:last-child {
+    margin-bottom: 0;
+}
+
+.marquee-bottom_top li span.result__left {
+    display: flex;
+    align-items: center;
+}
+
+.marquee-bottom_top li span.result__left img {
+    margin-right: 20px;
+}
+
+.marquee-bottom_top li span.result__left p {
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+
+.result__amount p {
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.result__amount span {
+    color: #8e979a;
+    font-size: 14px;
+}
+
+.bottom__to__top li {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.bottom__to__top li:last-child {
+    margin-bottom: 0;
+}
+
+.result__system {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.result__content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.footer__left_top,
+.footer__right {
+    margin-top: 40px;
+}
+
+.bottom__to__top li span.result__left {
+    display: flex;
+    align-items: center;
+}
+
+.bottom__to__top li span.result__left p {
+    text-transform: capitalize;
+    margin-bottom: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.result__amount {
+    text-align: right;
+}
+
+/* result end */
+
+/* review start */
+.single__review {
+    background: #22252A;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.review__active .slick-slide,
+.games__active .slick-slide {
+    margin: 0 5px;
+}
+
+.review__rating i {
+    color: #F4BD29;
+}
+
+.single__review i {
+    font-size: 20px;
+}
+
+.single__review p {
+    padding: 10px 0;
+    margin-bottom: 0;
+    line-height: 2;
+    text-transform: lowercase;
+}
+
+.footer_left,
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__left_top p {
+    margin-bottom: 0;
+    color: #8e979a;
+    text-align: justify;
+}
+
+ul.footer__menu li a {
+    color: #8e979a;
+    text-transform: capitalize;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* review end */
+
+/* footer start */
+.footer__payment .method {
+    width: 75px;
+    height: 55px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.footer__payment {
+    display: flex;
+    gap: 10px;
+}
+
+.footer__payment .method img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+
+.footer__social .facebook {
+    background: #3B5998;
+}
+
+.footer__social .instagram {
+    background: radial-gradient(circle farthest-corner at 32% 106%, #ffe17d 0, #ffcd69 10%, #fa9137 28%, #eb4141 42%, transparent 82%), linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+}
+
+.footer__social .twitter {
+    background: #55ACEE;
+}
+
+.footer__social .pinterest {
+    background: #CD202A;
+}
+
+.footer__social .envelope {
+    background: #425563;
+}
+
+ul.footer__social {
+    display: flex;
+    gap: 10px;
+}
+
+ul.footer__social li {
+    width: 60px;
+    height: 60px;
+}
+
+ul.footer__social li a {
+    display: block;
+    text-align: center;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    color: #fff;
+}
+
+ul.footer__social li a i {
+    font-size: 25px;
+}
+
+.img-license {
+    width: 60px;
+    height: 60px;
+}
+
+.img-license img {
+    width: 100%;
+}
+
+.license {
+    gap: 10px;
+}
+
+.copyright span {
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    padding: 15px 0;
+    padding-top: 0;
+}
+
+.img-app {
+    width: 130px;
+    height: 65px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.app-license {
+    gap: 10px;
+}
+
+/* footer end */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+    background-color: white;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Styles for the close button */
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+/* language start */
+
+.flag img {
+    width: 50px;
+    height: 34px;
+    border-radius: 3px;
+}
+
+.select__language {
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.select__language a {
+    color: #000;
+    font-weight: 600;
+}
+
+.single__language h6 {
+    text-align: start;
+}
+
+/* language end */
+
+/* login start */
+#login__form .form-group {
+    position: relative;
+}
+
+#login__form .password-toggle-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Style the button to look like an eye icon with a border */
+#login__form .password-toggle-button::before {
+    content: '\f06e';
+    /* Unicode for an eye icon */
+    font-family: FontAwesome;
+    /* Use a font icon library like FontAwesome */
+    font-size: 18px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+/* Style the button when the password is visible */
+#login__form .password-visible .password-toggle-button::before {
+    color: #0A554F;
+    /* Change to your desired color */
+    border: 1px solid #0A554F;
+    /* Change to your desired color */
+    background-color: #f2f2f2;
+    /* Background color when password is shown */
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+/* login end */
+
+/* registration start */
+.promo__code {
+    display: none;
+}
+
+#promoField {
+    color: #F4BD29;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+/* registration end */
+
+/* spin win start */
+.spinwin__area li {
+    width: 100%;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.spinwin__area li:last-child {
+    margin-bottom: 0;
+}
+
+.spinwin__area li span {
+    width: 40px;
+    background: #f1ecec;
+    text-align: center;
+    border-radius: 50%;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* spin win end */

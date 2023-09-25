@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- header start -->
+    <header>
+        <div class="header__area bg-white">
+            <div class="header__top pt-2 pb-2">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3">
+                            <div class="header__logo">
+                                <a href="index.html">
+                                    <img src="assets/images/logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9">
+                            <div class="header__top__right text-end">
+                                <button type="button" class="login" data-bs-toggle="modal"
+                                    data-bs-target="#login__form">Login</button>
+                                <button type="button" style="background-color: #D64E4E;" data-bs-toggle="modal"
+                                    data-bs-target="#reg__form">Sign Up</button>
+                                <button type="button" style="background-color: #0A554F;" data-bs-toggle="modal"
+                                    data-bs-target="#languages__modal">Language <span
+                                        id="selectedLanguage"></span></button>
+                                <button type="button" style="background-color: #22252A;" data-bs-toggle="offcanvas"
+                                    href="#offcanvas__desktop" role="button" aria-controls="offcanvas__desktop"><i
+                                        class="fa fa-bars"></i></button>
+
+                                <!-- login form -->
+                                <div class="modal fade" id="login__form" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Login Here</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="" method="post">
+                                                    <div class="form-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="Username">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="password" class="form-control" id="passwordField"
+                                                            placeholder="Password">
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                                        <p style="text-align: start;" class="m-0">
+                                                            <input type="checkbox" id="condition">
+                                                            <label for="condition">Remember
+                                                                me</label>
+                                                        </p>
+                                                        <a href=" #">
+                                                            Forgot Password?
+                                                        </a>
+                                                    </div>
+                                                    <button type="submit"
+                                                        style="background-color: #A0CF2F;">Login</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- registation form -->
+                                <div class="modal fade" id="reg__form" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Registation Here
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="" method="post">
+                                                    <div class="form-group mb-3">
+                                                        <select name="" id="" class="form-control">
+                                                            <option disabled selected>Select Country</option>
+                                                            <option value="">(BDT) Bangladesh</option>
+                                                            <option value="">(INR) India</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="Full Name">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="Username">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="email" class="form-control" placeholder="Email">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="password" class="form-control" id="passwordField1"
+                                                            placeholder="Password">
+                                                        <span class="password-toggle-button"
+                                                            id="showPasswordButton1"></span>
+                                                    </div>
+
+                                                    <div class="form-group mb-3">
+                                                        <input type="password" class="form-control" id="passwordField2"
+                                                            placeholder="Confirm Password">
+                                                        <span class="password-toggle-button"
+                                                            id="showPasswordButton2"></span>
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="mobile number">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <h6 class="promo__field" id="promoField">Got Promo Code?</h6>
+                                                        <input type="text" class="form-control promo__code"
+                                                            id="promoCodeInput" placeholder="promo code">
+                                                    </div>
+                                                    <p style="text-align: start;">
+                                                        <input type="checkbox" id="condition">
+                                                        <label for="condition">I agree to Terms & Condition and Privacy
+                                                            Policy</label>
+                                                    </p>
+                                                    <button type="submit" style="background-color: #D64E4E;">Sign
+                                                        Up</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- desktop offcanvas -->
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas__desktop"
+                                    aria-labelledby="offcanvasExampleLabel">
+                                    <div class="offcanvas-body">
+                                        <ul class="offcanvas__menu">
+                                            <li><a href="#">Affiliate</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="">Terms & Conditions</a></li>
+                                            <li><a href="">Disconnection Policy</a></li>
+                                            <li><a href="">Responsible Gambling</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- language modal -->
+                                <div class="modal fade" id="languages__modal" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Languages
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="single__language">
+                                                    <h6>Bangladesh</h6>
+                                                    <div class="select__language d-flex align-items-center">
+                                                        <div class="flag">
+                                                            <img src="assets/images/language/Flag-Bangladesh.webp"
+                                                                alt="">
+                                                        </div>
+                                                        <a href="#" class="lan_en">
+                                                            English
+                                                        </a>
+                                                        <a href="" class="lan_bn">
+                                                            Bangla
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="single__language">
+                                                    <h6>India</h6>
+                                                    <div class="select__language d-flex align-items-center">
+                                                        <div class="flag">
+                                                            <img src="assets/images/language/india.png" alt="">
+                                                        </div>
+                                                        <a href="#" class="lan_en">
+                                                            English
+                                                        </a>
+                                                        <a href="" class="lan_bn">
+                                                            தமிழ்
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="single__language">
+                                                    <h6>Indonesia</h6>
+                                                    <div class="select__language d-flex align-items-center">
+                                                        <div class="flag">
+                                                            <img src="assets/images/language/indonasia.png" alt="">
+                                                        </div>
+                                                        <a href="#" class="lan_en">
+                                                            English
+                                                        </a>
+                                                        <a href="" class="lan_bn">
+                                                            Bahasa
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="single__language">
+                                                    <h6>Pakistan</h6>
+                                                    <div class="select__language d-flex align-items-center">
+                                                        <div class="flag">
+                                                            <img src="assets/images/language/pakistan.webp" alt="">
+                                                        </div>
+                                                        <a href="#" class="lan_en">
+                                                            English
+                                                        </a>
+                                                        <a href="" class="lan_bn">
+                                                            اردو
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="single__language">
+                                                    <h6>Brazil</h6>
+                                                    <div class="select__language d-flex align-items-center">
+                                                        <div class="flag">
+                                                            <img src="assets/images/language/brazil.webp" alt="">
+                                                        </div>
+                                                        <a href="#" class="lan_en">
+                                                            English
+                                                        </a>
+                                                        <a href="" class="lan_bn">
+                                                            Português
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="main__menu">
+                                <ul class="d-flex align-items-center">
+                                    <li><a id="loginIcon" href="index.html"><i class="fa fa-home"></i></a></li>
+                                    <li><a href=""><i class="fa fa-download"></i></a></li>
+                                    <li><a href="">exchange</a></li>
+                                    <li><a href="">Sports</a></li>
+                                    <li><a href="">Casino</a></li>
+                                    <li><a href="">Slots</a></li>
+                                    <li><a href="">Crash</a></li>
+                                    <li><a href="">Table</a></li>
+                                    <li><a href="">Fishing</a></li>
+                                    <li><a href="">Arcade</a></li>
+                                    <li><a href="">Cock Fight</a></li>
+                                    <li><a href="">Racing</a></li>
+                                    <li><a href="">Lottery</a></li>
+                                    <li><a href="">Promotion</a></li>
+                                    <li><a href="">VIP</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- banner start -->
+    <div class="banner__area">
+        <div class="banner__active">
+            <a href="#"><img src="assets/images/1.png" alt=""></a>
+            <a href="#"><img src="assets/images/2.jpg" alt=""></a>
+            <a href="#"><img src="assets/images/3.jpg" alt=""></a>
+        </div>
+    </div>
+    <!-- banner end -->
+
+    <!-- marquee start -->
+    <div class="marquee-container d-flex align-items-center">
+        <div class="marquss__icon">
+            <i class="fa-solid fa-microphone-lines"></i>
+        </div>
+        <marquee behavior="scroll" direction="left" class="marquee">
+            <p>
+                <span> <strong style="color: #FFCA00;">Lorem, ipsum dolor.</strong> Lorem ipsum dolor sit amet
+                    consectetur
+                    adipisicing elit. Ad,
+                    iusto.</span>
+                <span> <strong style="color: #FFCA00;">Lorem, ipsum dolor.</strong> Lorem ipsum dolor sit amet
+                    consectetur
+                    adipisicing elit. Ad,
+                    iusto.</span>
+                <span> <strong style="color: #FFCA00;">Lorem, ipsum dolor.</strong> Lorem ipsum dolor sit amet
+                    consectetur
+                    adipisicing elit. Ad,
+                    iusto.</span>
+            </p>
+        </marquee>
+    </div>
+    <!-- marquee end -->
+
+    <!-- important item start -->
+    <div class="important__item_area pt-3 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="important__info d-flex align-items-center position-relative" style="gap: 10px;">
+                        <div class="single__item">
+                            <div class="item__info" data-bs-toggle="modal" data-bs-target="#search__item">
+                                <i class="fa fa-search"></i>
+                                <h6>search</h6>
+                            </div>
+                        </div>
+                        <a href="spinwin.html" class="single__item">
+                            <div class="item__info">
+                                <i class="fa-solid fa-snowflake"></i>
+                                <h6>Spin & Win</h6>
+                            </div>
+                        </a>
+                        <a href="point.html" class="single__item">
+                            <div class="item__info">
+                                <i class="fa-solid fa-hat-wizard"></i>
+                                <h6>JW Points</h6>
+                            </div>
+                        </a>
+                        <div class="single__item">
+                            <div class="item__info">
+                                <i class="fa-solid fa-chess-board"></i>
+                                <h6>Leaderboard</h6>
+                            </div>
+                        </div>
+                        <div class="single__item" id="topgames">
+                            <div class="item__info">
+                                <i class="fa-solid fa-dice"></i>
+                                <h6>Top Games</h6>
+                            </div>
+                        </div>
+                        <div class="single__item" id="recommended">
+                            <div class="item__info">
+                                <i class="fa-brands fa-squarespace"></i>
+                                <h6>Recommended</h6>
+                            </div>
+                        </div>
+                        <div class="single__item" id="megaWin">
+                            <div class="item__info">
+                                <i class="fa-solid fa-ranking-star"></i>
+                                <h6>Mega Win</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game__important__list__show" id="mega__win__game__list" style="display: none;">
+        <div class="container">
+            <div class="row g-3 mt-1" id="show__all_game">
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/5.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/5.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="show__game" id="show__game">
+                        <button>Show More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game__important__list__show" id="recomemded__game__list" style="display: none;">
+        <div class="container">
+            <div class="row g-3 mt-1" id="show__all_game">
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/5.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/5.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="show__game" id="show__game">
+                        <button>Show More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game__important__list__show" id="top__game__list" style="display: none;">
+        <div class="container">
+            <div class="row g-3 mt-1" id="show__all_game">
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="show__game" id="show__game">
+                        <button>Show More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- important item end -->
+
+    <!-- games start -->
+    <div class="games__area pt-3 pb-3">
+        <div class="container">
+            <h6 class="footer__heading text-white">Top Games</h6>
+            <div class="games__active">
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/1.png" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/2.jpg" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/3.jpg" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/4.jpg" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/5.jpg" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/game1.png" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/1.png" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/2.jpg" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/3.jpg" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/4.jpg" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/5.jpg" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+                <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                    <div class="game__photo">
+                        <img src="assets/images/game/game1.png" alt="">
+                    </div>
+                    <h6>crazytime</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- games end -->
+
+    <!-- result start -->
+    <div class="result__area pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="single__result p-0">
+                        <div class="result__slider__active">
+                            <div class="single__slider">
+                                <img src="assets/images/result/1.jpg" alt="">
+                                <div class="slider-content d-flex">
+                                    <div class="slide__content__left">
+                                        <h6>Monoplay Live</h6>
+                                        <span>monoplay live</span>
+                                    </div>
+                                    <div class="slide__content__right">
+                                        <button type="button" class="btn">Play Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single__slider">
+                                <img src="assets/images/result/2.jpg" alt="">
+                                <div class="slider-content d-flex">
+                                    <div class="slide__content__left">
+                                        <h6>Roulette</h6>
+                                        <span>monoplay live</span>
+                                    </div>
+                                    <div class="slide__content__right">
+                                        <button type="button" class="btn">Play Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single__slider">
+                                <img src="assets/images/result/3.jpg" alt="">
+                                <div class="slider-content d-flex">
+                                    <div class="slide__content__left">
+                                        <h6>Mega BAll</h6>
+                                        <span>monoplay live</span>
+                                    </div>
+                                    <div class="slide__content__right">
+                                        <button type="button" class="btn">Play Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="single__result" style="padding-top: 0; padding-bottom: 0;">
+                        <ul class="bottom__to__top">
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>jon doe***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>watson***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>mahi***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>mira***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>watson***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>hilari***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>Atwell***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>Melissa***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>George ***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>Campos***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>Christopher***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>Jimenes***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>Jason***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>Lopez***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>Carter***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>Ursula***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>York***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="result__left">
+                                    <img src="assets/images/result/ra.jpg" alt="">
+                                    <p>rahim***</p>
+                                </span>
+                                <span class="result__amount">
+                                    <p>BDT 120000.00</p>
+                                    <span>50 minit ago</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="single__result">
+                        <div class="result__system">
+                            <div class="result__content">
+                                <h6>JeetWin Affiliate Program</h6>
+                                <p>Join JeetWin affiliate program, introduce new members using your affiliate
+                                    referral
+                                    link and
+                                    earn life time commission.</p>
+                                <button>show more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- result end -->
+
+    <!-- review start -->
+    <div class="review__area">
+        <div class="container">
+            <h6 class="footer__heading text-white">Reviews</h6>
+            <div class="review__active">
+                <div class="single__review">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Working with the JeetWin affiliates is both convenient and easy as they are accommodating to our
+                        needs and budget. Their product is amazing for players offering generous bonuses and promotional
+                        offers. The JeetWin team was professional, easy tomended!<br>
+                        <strong>-tudo</strong>
+                    </p>
+                    <div class="review__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="single__review">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>We are happy to work with JeetWin Affiliates. The relationship we established with our JeetWin
+                        Affiliate Manager is excellent. We at Guide2Gambling are confident that we will continue to work
+                        together for many years to come!<br>
+                        <strong>-tudo</strong>
+                    </p>
+                    <div class="review__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="single__review">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>A completely engaging and exciting online casino experience made specifically for India. we’re
+                        always happy when we see a name like JeetWin come along. JeetWin isplayers are well taken care
+                        of.like JeetWin come along. JeetWin isplayers are well taken care
+                        of.<br>
+                        <strong>-tudo</strong>
+                    </p>
+                    <div class="review__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="single__review">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Working with the JeetWin affiliates is both convenient and easy as they are accommodating to our
+                        needs and budget. Their product is amazing for players offering generous bonuses and promotional
+                        offers. The JeetWin team was professional, easy to reach <br>
+                        <strong>-tudo</strong>
+                    </p>
+                    <div class="review__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="single__review">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>We are happy to work with JeetWin Affiliates. The relationship we established with our JeetWin
+                        Affiliate Manager is excellent. We at Guide2Gambling are confident that we will continue to work
+                        together for many years to come!<br>
+                        <strong>-tudo</strong>
+                    </p>
+                    <div class="review__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="single__review">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>A completely engaging and exciting online casino experience made specifically for India. we’re
+                        always happy when we see a name like JeetWin come along. JeetWin is a reliable and trustworthy
+                        casino – and they go out of their way to ensure that Indian players are well taken care of.<br>
+                        <strong>-tudo</strong>
+                    </p>
+                    <div class="review__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- review end -->
+
+    <!-- footer start -->
+    <footer>
+        <div class="footer__area pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="footer_left">
+                            <div class="footer__left_top">
+                                <h6 class="footer__heading text-white">About JeetWin</h6>
+                                <p>JeetWin was established in 2017 and operated under a Curacao gaming license with
+                                    more
+                                    than 2 million users. JeetWin is one of Asia's most trusted and leading online
+                                    casinos and sports betting platforms. JeetWin offers a wide selection of slot
+                                    games,
+                                    live casinos, lotteries, sportsbooks, sports exchanges, and e-sports. Members
+                                    who
+                                    sign up will receive 5 free spins and have a chance to win exciting prizes.</p>
+                            </div>
+                            <div class="footer__left_top">
+                                <h6 class="footer__heading text-white">Payment Methods</h6>
+                                <div class="footer__payment">
+                                    <div class="method">
+                                        <img src="assets/images/payment/footer-payment-astropay.60088e0.svg" alt="">
+                                    </div>
+                                    <div class="method">
+                                        <img src="assets/images/payment/footer-payment-bkash.f086c33.svg" alt="">
+                                    </div>
+                                    <div class="method">
+                                        <img src="assets/images/payment/footer-payment-nagad.6780d47.svg" alt="">
+                                    </div>
+                                    <div class="method">
+                                        <img src="assets/images/payment/footer-payment-rocket.5cd0b37.svg" alt="">
+                                    </div>
+                                    <div class="method">
+                                        <img src="assets/images/payment/footer-payment-usdt.bc599a3.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer__left_top">
+                                <h6 class="footer__heading text-white">Follow Us</h6>
+                                <ul class="footer__social">
+                                    <li> <a href="" class="facebook" target="_blank"><i
+                                                class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="" class="instagram" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="" class="twitter" target="_blank"><i
+                                                class="fa-brands fa-twitter"></i></a></li>
+                                    <li> <a href="" class="pinterest" target="_blank"><i
+                                                class="fa-brands fa-pinterest"></i></a></li>
+                                    <li> <a href="" class="envelope" target="_blank"><i
+                                                class="fa-regular fa-envelope"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 offset-xl-1">
+                        <div class="footer__right">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="footer__heading text-white">About JeetWin</h6>
+                                    <ul class="footer__menu">
+                                        <li><a href="point.html">JW Points</a></li>
+                                        <li><a href="">VIP</a></li>
+                                        <li><a href="">Blog</a></li>
+                                        <li><a href="">Affiliate Program</a></li>
+                                        <li><a href="">Ambassador</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="footer__heading text-white">Info</h6>
+                                    <ul class="footer__menu">
+                                        <li><a href="">Terms & Conditions</a></li>
+                                        <li><a href="">FAQ</a></li>
+                                        <li><a href="">Privacy Policy</a></li>
+                                        <li><a href="">Disconnection Policy</a></li>
+                                        <li><a href="">Responsible Gambling</a></li>
+                                        <li><a href="">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="footer__heading text-white">Licenses</h6>
+                                    <div class="license d-flex align-items-center">
+                                        <div class="img-license">
+                                            <img src="assets/images/payment/18.svg" alt="">
+                                        </div>
+                                        <div class="img-license">
+                                            <img src="assets/images/payment/gc.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="footer__heading text-white">Download App</h6>
+                                    <div class="app-license d-flex align-items-center">
+                                        <div class="img-app">
+                                            <img src="assets/images/payment/android-dark.f0099f5.svg" alt="">
+                                        </div>
+                                        <div class="img-app">
+                                            <img src="assets/images/payment/ios-dark.3022b93.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>Copyright 2023 | zwin.live | All Right Reserved</span>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- search item -->
+    <div class="modal fade" id="search__item" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Search Here</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="get">
+                        <input type="search" class="form-control" placeholder="search here">
+                    </form>
+
+                    <div class="search__box mt-3">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <a href="#" class="single__game">
+                                    <div class="game__photo">
+                                        <img src="assets/images/game/1.png" alt="">
+                                    </div>
+                                    <h6>crazytime</h6>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="single__game">
+                                    <div class="game__photo">
+                                        <img src="assets/images/game/2.jpg" alt="">
+                                    </div>
+                                    <h6>crazytime</h6>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="single__game">
+                                    <div class="game__photo">
+                                        <img src="assets/images/game/3.jpg" alt="">
+                                    </div>
+                                    <h6>crazytime</h6>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="single__game">
+                                    <div class="game__photo">
+                                        <img src="assets/images/game/4.jpg" alt="">
+                                    </div>
+                                    <h6>crazytime</h6>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="single__game">
+                                    <div class="game__photo">
+                                        <img src="assets/images/game/5.jpg" alt="">
+                                    </div>
+                                    <h6>crazytime</h6>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="single__game">
+                                    <div class="game__photo">
+                                        <img src="assets/images/game/game1.png" alt="">
+                                    </div>
+                                    <h6>crazytime</h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Click event handler for Mega Win button
+            $("#megaWin").click(function () {
+                $("#mega__win__game__list").show();
+                $("#recomemded__game__list").hide();
+                $("#top__game__list").hide();
+                $(".games__area").hide();
+                $(".result__area").hide();
+                $(".review__area").hide();
+            });
+
+            // Click event handler for Recommended button
+            $("#recommended").click(function () {
+                $("#mega__win__game__list").hide();
+                $("#recomemded__game__list").show();
+                $("#top__game__list").hide();
+                $(".games__area").hide();
+                $(".result__area").hide();
+                $(".review__area").hide();
+            });
+
+            // Click event handler for Top Games button
+            $("#topgames").click(function () {
+                $("#mega__win__game__list").hide();
+                $("#recomemded__game__list").hide();
+                $("#top__game__list").show();
+                $(".games__area").hide();
+                $(".result__area").hide();
+                $(".review__area").hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

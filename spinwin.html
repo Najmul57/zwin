@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- header start -->
+    <header>
+        <div class="header__area bg-white">
+            <div class="header__top pt-2 pb-2">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3">
+                            <div class="header__logo">
+                                <a href="index.html">
+                                    <img src="assets/images/logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9">
+                            <div class="header__top__right text-end">
+                                <button type="button" class="login" data-bs-toggle="modal"
+                                    data-bs-target="#login__form">Login</button>
+                                <button type="button" style="background-color: #D64E4E;" data-bs-toggle="modal"
+                                    data-bs-target="#reg__form">Sign Up</button>
+                                <button type="button" style="background-color: #0A554F;" data-bs-toggle="modal"
+                                    data-bs-target="#languages__modal">Language <span
+                                        id="selectedLanguage"></span></button>
+                                <button type="button" style="background-color: #22252A;" data-bs-toggle="offcanvas"
+                                    href="#offcanvas__desktop" role="button" aria-controls="offcanvas__desktop"><i
+                                        class="fa fa-bars"></i></button>
+
+                                <!-- login form -->
+                                <div class="modal fade" id="login__form" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Login Here</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="" method="post">
+                                                    <div class="form-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="Username">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="password" class="form-control" id="passwordField"
+                                                            placeholder="Password">
+                                                    </div>
+                                                    <button type="submit"
+                                                        style="background-color: #A0CF2F;">Login</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- registation form -->
+                                <div class="modal fade" id="reg__form" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Registation Here
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="" method="post">
+                                                    <div class="form-group mb-3">
+                                                        <select name="" id="" class="form-control">
+                                                            <option disabled selected>Select Country</option>
+                                                            <option value="">(BDT) Bangladesh</option>
+                                                            <option value="">(INR) India</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="Full Name">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="Username">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="email" class="form-control" placeholder="Email">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="password" class="form-control" id="passwordField1"
+                                                            placeholder="Password">
+                                                        <span class="password-toggle-button"
+                                                            id="showPasswordButton1"></span>
+                                                    </div>
+
+                                                    <div class="form-group mb-3">
+                                                        <input type="password" class="form-control" id="passwordField2"
+                                                            placeholder="Confirm Password">
+                                                        <span class="password-toggle-button"
+                                                            id="showPasswordButton2"></span>
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="mobile number">
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <h6 class="promo__field" id="promoField">Got Promo Code?</h6>
+                                                        <input type="text" class="form-control promo__code"
+                                                            id="promoCodeInput" placeholder="promo code">
+                                                    </div>
+                                                    <p style="text-align: start;">
+                                                        <input type="checkbox" id="condition">
+                                                        <label for="condition">I agree to Terms & Condition and Privacy
+                                                            Policy</label>
+                                                    </p>
+                                                    <button type="submit" style="background-color: #D64E4E;">Sign
+                                                        Up</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- desktop offcanvas -->
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas__desktop"
+                                    aria-labelledby="offcanvasExampleLabel">
+                                    <div class="offcanvas-body">
+                                        <ul class="offcanvas__menu">
+                                            <li><a href="#">Affiliate</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="">Terms & Conditions</a></li>
+                                            <li><a href="">Disconnection Policy</a></li>
+                                            <li><a href="">Responsible Gambling</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- language modal -->
+                                <div class="modal fade" id="languages__modal" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Select Languages
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="single__language">
+                                                    <h6>Bangladesh</h6>
+                                                    <div class="select__language d-flex align-items-center">
+                                                        <div class="flag">
+                                                            <img src="assets/images/language/Flag-Bangladesh.webp"
+                                                                alt="">
+                                                        </div>
+                                                        <a href="#" class="lan_en">
+                                                            English
+                                                        </a>
+                                                        <a href="" class="lan_bn">
+                                                            Bangla
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="single__language">
+                                                    <h6>India</h6>
+                                                    <div class="select__language d-flex align-items-center">
+                                                        <div class="flag">
+                                                            <img src="assets/images/language/india.png" alt="">
+                                                        </div>
+                                                        <a href="#" class="lan_en">
+                                                            English
+                                                        </a>
+                                                        <a href="" class="lan_bn">
+                                                            தமிழ்
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="single__language">
+                                                    <h6>Indonesia</h6>
+                                                    <div class="select__language d-flex align-items-center">
+                                                        <div class="flag">
+                                                            <img src="assets/images/language/indonasia.png" alt="">
+                                                        </div>
+                                                        <a href="#" class="lan_en">
+                                                            English
+                                                        </a>
+                                                        <a href="" class="lan_bn">
+                                                            Bahasa
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="single__language">
+                                                    <h6>Pakistan</h6>
+                                                    <div class="select__language d-flex align-items-center">
+                                                        <div class="flag">
+                                                            <img src="assets/images/language/pakistan.webp" alt="">
+                                                        </div>
+                                                        <a href="#" class="lan_en">
+                                                            English
+                                                        </a>
+                                                        <a href="" class="lan_bn">
+                                                            اردو
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="single__language">
+                                                    <h6>Brazil</h6>
+                                                    <div class="select__language d-flex align-items-center">
+                                                        <div class="flag">
+                                                            <img src="assets/images/language/brazil.webp" alt="">
+                                                        </div>
+                                                        <a href="#" class="lan_en">
+                                                            English
+                                                        </a>
+                                                        <a href="" class="lan_bn">
+                                                            Português
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="main__menu">
+                                <ul class="d-flex align-items-center">
+                                    <li><a id="loginIcon" href="index.html"><i class="fa fa-home"></i></a></li>
+                                    <li><a href=""><i class="fa fa-download"></i></a></li>
+                                    <li><a href="">exchange</a></li>
+                                    <li><a href="">Sports</a></li>
+                                    <li><a href="">Casino</a></li>
+                                    <li><a href="">Slots</a></li>
+                                    <li><a href="">Crash</a></li>
+                                    <li><a href="">Table</a></li>
+                                    <li><a href="">Fishing</a></li>
+                                    <li><a href="">Arcade</a></li>
+                                    <li><a href="">Cock Fight</a></li>
+                                    <li><a href="">Racing</a></li>
+                                    <li><a href="">Lottery</a></li>
+                                    <li><a href="">Promotion</a></li>
+                                    <li><a href="">VIP</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- breadcrumb start -->
+    <div class="breadcrumb">
+        <img src="assets/images/breadcrumb/1.jpg" alt="" style="width: 100%;">
+    </div>
+    <!-- breadcrumb end -->
+
+    <div class="spinwin__area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card p-4">
+                        <h5>Introduction</h5>
+                        <p class="m-0">JeetWin rewards players with free spins for achieving a simple goal or just
+                            playing daily
+                            games. Free spins can be used to win real cash, gift vouchers, and many other rewards.</p>
+                    </div>
+                    <div class="card p-4 mt-3">
+                        <h5>Prizes</h5>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <td style="width: 50%;">Phones</td>
+                                <td>2 iPhone 14 Pro Max</td>
+                            </tr>
+                            <tr>
+                                <td>Free Credits</td>
+                                <td>BDT 100 – BDT 10,000</td>
+                            </tr>
+                            <tr>
+                                <td>JW Points</td>
+                                <td>1,000 – 15,000
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: center;">
+                                    <p class="m-0">Free Spins</p>
+                                    <p class="m-0">Win iPhone 14 pro max and more
+                                    </p>
+                                    <div class="show__game mt-2">
+                                        <button>Show More</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="card p-4 mt-3">
+                        <h5>Free Spins</h5>
+                        <ul>
+                            <li class="d-flex align-items-center">
+                                <span>1</span>
+                                <div class="d-flex">
+                                    <div class="single_win">
+                                        <p class="m-0">New sign up</p>
+                                        <p class="m-0">Free spins tickets</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <span>2</span>
+                                <div class="d-flex">
+                                    <div class="single_win">
+                                        <p class="m-0">Completed 10,000 turnover daily</p>
+                                        <p class="m-0">Slots & Fish Games</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <span>3</span>
+                                <div class="d-flex">
+                                    <div class="single_win">
+                                        <p class="m-0">
+                                            Completed 10,000 deposit daily</p>
+                                        <p class="m-0">Free spins tickets</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <span>4</span>
+                                <div class="d-flex">
+                                    <div class="single_win">
+                                        <p class="m-0">Special day deposit tickets</p>
+                                        <p class="m-0">9th, 19th and 29th</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card p-4 mt-3">
+                        <h5>Terms and Conditions</h5>
+                        <ul>
+                            <li>1. Free spin tickets must be claimed from Spin and Win. Ticket claim issues should be
+                                reported by 12:00 AM GMT +6 to Customer Support.</li>
+                            <li>2. Tickets must be claimed within 24 hours of issuance or they will expire.</li>
+                            <li>3. Promotion dates are from 12:00AM BST to 11:59PM BST.</li>
+                            <li>4. Players who meet the requirements must visit the Spin and Win page to redeem tickets.
+                            </li>
+                            <li>5. Players can only have one account. Multiple or fraudulent accounts will be locked,
+                                and deposits forfeited.</li>
+                            <li>6. JeetWin reserves the right to modify, alter, discontinue, cancel, refuse, or void
+                                Spin and Win at any time.</li>
+                            <li>7. JeetWin's Terms and Conditions supersede all Spin and Win Terms and Conditions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer start -->
+    <footer>
+        <div class="footer__area pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="footer_left">
+                            <div class="footer__left_top">
+                                <h6 class="footer__heading text-white">About JeetWin</h6>
+                                <p>JeetWin was established in 2017 and operated under a Curacao gaming license with
+                                    more
+                                    than 2 million users. JeetWin is one of Asia's most trusted and leading online
+                                    casinos and sports betting platforms. JeetWin offers a wide selection of slot
+                                    games,
+                                    live casinos, lotteries, sportsbooks, sports exchanges, and e-sports. Members
+                                    who
+                                    sign up will receive 5 free spins and have a chance to win exciting prizes.</p>
+                            </div>
+                            <div class="footer__left_top">
+                                <h6 class="footer__heading text-white">Payment Methods</h6>
+                                <div class="footer__payment">
+                                    <div class="method">
+                                        <img src="assets/images/payment/footer-payment-astropay.60088e0.svg" alt="">
+                                    </div>
+                                    <div class="method">
+                                        <img src="assets/images/payment/footer-payment-bkash.f086c33.svg" alt="">
+                                    </div>
+                                    <div class="method">
+                                        <img src="assets/images/payment/footer-payment-nagad.6780d47.svg" alt="">
+                                    </div>
+                                    <div class="method">
+                                        <img src="assets/images/payment/footer-payment-rocket.5cd0b37.svg" alt="">
+                                    </div>
+                                    <div class="method">
+                                        <img src="assets/images/payment/footer-payment-usdt.bc599a3.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer__left_top">
+                                <h6 class="footer__heading text-white">Follow Us</h6>
+                                <ul class="footer__social">
+                                    <li> <a href="" class="facebook" target="_blank"><i
+                                                class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="" class="instagram" target="_blank"><i
+                                                class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="" class="twitter" target="_blank"><i
+                                                class="fa-brands fa-twitter"></i></a></li>
+                                    <li> <a href="" class="pinterest" target="_blank"><i
+                                                class="fa-brands fa-pinterest"></i></a></li>
+                                    <li> <a href="" class="envelope" target="_blank"><i
+                                                class="fa-regular fa-envelope"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 offset-xl-1">
+                        <div class="footer__right">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="footer__heading text-white">About JeetWin</h6>
+                                    <ul class="footer__menu">
+                                        <li><a href="point.html">JW Points</a></li>
+                                        <li><a href="">VIP</a></li>
+                                        <li><a href="">Blog</a></li>
+                                        <li><a href="">Affiliate Program</a></li>
+                                        <li><a href="">Ambassador</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="footer__heading text-white">Info</h6>
+                                    <ul class="footer__menu">
+                                        <li><a href="">Terms & Conditions</a></li>
+                                        <li><a href="">FAQ</a></li>
+                                        <li><a href="">Privacy Policy</a></li>
+                                        <li><a href="">Disconnection Policy</a></li>
+                                        <li><a href="">Responsible Gambling</a></li>
+                                        <li><a href="">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="footer__heading text-white">Licenses</h6>
+                                    <div class="license d-flex align-items-center">
+                                        <div class="img-license">
+                                            <img src="assets/images/payment/18.svg" alt="">
+                                        </div>
+                                        <div class="img-license">
+                                            <img src="assets/images/payment/gc.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="footer__heading text-white">Download App</h6>
+                                    <div class="app-license d-flex align-items-center">
+                                        <div class="img-app">
+                                            <img src="assets/images/payment/android-dark.f0099f5.svg" alt="">
+                                        </div>
+                                        <div class="img-app">
+                                            <img src="assets/images/payment/ios-dark.3022b93.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>Copyright 2023 | zwin.live | All Right Reserved</span>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
