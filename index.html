@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
@@ -24,25 +24,25 @@
             <div class="header__top pt-2 pb-2">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-xl-3">
+                        <div class="col-4">
                             <div class="header__logo">
                                 <a href="index.html">
                                     <img src="assets/images/logo.svg" alt="">
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl-9">
-                            <div class="header__top__right text-end">
+                        <div class="col-8">
+                            <div class="header__top__right d-flex justify-content-end align-items-center">
                                 <button type="button" class="login" data-bs-toggle="modal"
                                     data-bs-target="#login__form">Login</button>
                                 <button type="button" style="background-color: #D64E4E;" data-bs-toggle="modal"
                                     data-bs-target="#reg__form">Sign Up</button>
-                                <button type="button" style="background-color: #0A554F;" data-bs-toggle="modal"
-                                    data-bs-target="#languages__modal">Language <span
+                                <button class="d-none d-md-block" type="button" style="background-color: #0A554F;"
+                                    data-bs-toggle="modal" data-bs-target="#languages__modal">Language <span
                                         id="selectedLanguage"></span></button>
-                                <button type="button" style="background-color: #22252A;" data-bs-toggle="offcanvas"
-                                    href="#offcanvas__desktop" role="button" aria-controls="offcanvas__desktop"><i
-                                        class="fa fa-bars"></i></button>
+                                <button class="d-none d-md-block" type="button" style="background-color: #22252A;"
+                                    data-bs-toggle="offcanvas" href="#offcanvas__desktop" role="button"
+                                    aria-controls="offcanvas__desktop"><i class="fa fa-bars"></i></button>
 
                                 <!-- login form -->
                                 <div class="modal fade" id="login__form" data-bs-backdrop="static"
@@ -253,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header__bottom">
+            <div class="header__bottom d-none d-xl-block">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -287,9 +287,9 @@
     <!-- banner start -->
     <div class="banner__area">
         <div class="banner__active">
-            <a href="#"><img src="assets/images/1.png" alt=""></a>
-            <a href="#"><img src="assets/images/2.jpg" alt=""></a>
-            <a href="#"><img src="assets/images/3.jpg" alt=""></a>
+            <a href="#"><img src="assets/images/banner/1.jpg" class="w-100" alt=""></a>
+            <a href="#"><img src="assets/images/banner/2.jpg" class="w-100" alt=""></a>
+            <a href="#"><img src="assets/images/banner/3.jpg" class="w-100" alt=""></a>
         </div>
     </div>
     <!-- banner end -->
@@ -322,7 +322,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="important__info d-flex align-items-center position-relative" style="gap: 10px;">
+                    <div class="important__info d-flex align-items-center position-relative flex-wrap"
+                        style="gap: 10px;">
                         <div class="single__item">
                             <div class="item__info" data-bs-toggle="modal" data-bs-target="#search__item">
                                 <i class="fa fa-search"></i>
@@ -373,7 +374,207 @@
 
     <div class="game__important__list__show" id="mega__win__game__list" style="display: none;">
         <div class="container">
-            <div class="row g-3 mt-1" id="show__all_game">
+            <div class="row g-3 mt-1" id="show__all_game2">
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
                 <div class="col-6 col-sm-2 col-md-4 col-lg-2">
                     <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
                         <div class="game__photo">
@@ -473,8 +674,8 @@
             </div>
             <div class="row mt-4">
                 <div class="col-12">
-                    <div class="show__game" id="show__game">
-                        <button>Show More</button>
+                    <div class="show__game" id="show__game2">
+                        <button id="showMoreButton2">Show More</button>
                     </div>
                 </div>
             </div>
@@ -482,7 +683,199 @@
     </div>
     <div class="game__important__list__show" id="recomemded__game__list" style="display: none;">
         <div class="container">
-            <div class="row g-3 mt-1" id="show__all_game">
+            <div class="row g-3 mt-1" id="show__all_game1">
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/5.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/5.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/5.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/3.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/5.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/2.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/4.jpg" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
                 <div class="col-6 col-sm-2 col-md-4 col-lg-2">
                     <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
                         <div class="game__photo">
@@ -582,8 +975,8 @@
             </div>
             <div class="row mt-4">
                 <div class="col-12">
-                    <div class="show__game" id="show__game">
-                        <button>Show More</button>
+                    <div class="show__game" id="show__game1">
+                        <button id="showMoreButton1">Show More</button>
                     </div>
                 </div>
             </div>
@@ -688,11 +1081,91 @@
                         <h6>crazytime</h6>
                     </a>
                 </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-2 col-md-4 col-lg-2">
+                    <a href="#" class="single__game" data-bs-toggle="modal" data-bs-target="#login__form">
+                        <div class="game__photo">
+                            <img src="assets/images/game/game1.png" alt="">
+                        </div>
+                        <h6>crazytime</h6>
+                    </a>
+                </div>
             </div>
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="show__game" id="show__game">
-                        <button>Show More</button>
+                        <button id="showMoreButton">Show More</button>
                     </div>
                 </div>
             </div>
@@ -783,7 +1256,7 @@
     <!-- games end -->
 
     <!-- result start -->
-    <div class="result__area pt-5 pb-5">
+    <div class="result__area pt-5 pb-5 d-none d-xl-block">
         <div class="container">
             <div class="row">
                 <div class="col-xl-4">
@@ -1139,7 +1612,7 @@
         <div class="footer__area pt-5 pb-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="footer_left">
                             <div class="footer__left_top">
                                 <h6 class="footer__heading text-white">About JeetWin</h6>
@@ -1189,7 +1662,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5 offset-xl-1">
+                    <div class="col-lg-5 offset-lg-1 col-md-6">
                         <div class="footer__right">
                             <div class="row">
                                 <div class="col-md-6">
@@ -1359,6 +1832,105 @@
                 $(".result__area").hide();
                 $(".review__area").hide();
             });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const showMoreButton = document.getElementById("showMoreButton");
+            const showAllGame = document.getElementById("show__all_game");
+
+            // Set the initial count of displayed items and the number to show at a time
+            let displayedItemCount = 12;
+            const itemsToShowAtATime = 12;
+
+            // Function to show the next set of items
+            function showNextItems() {
+                for (let i = displayedItemCount; i < displayedItemCount + itemsToShowAtATime; i++) {
+                    const item = showAllGame.children[i];
+                    if (item) {
+                        item.style.display = "block";
+                    } else {
+                        // If there are no more items to show, hide the "Show More" button
+                        showMoreButton.style.display = "none";
+                        break;
+                    }
+                }
+                displayedItemCount += itemsToShowAtATime;
+            }
+
+            // Initially hide all items except the first 6
+            for (let i = displayedItemCount; i < showAllGame.children.length; i++) {
+                showAllGame.children[i].style.display = "none";
+            }
+
+            // Add a click event listener to the "Show More" button
+            showMoreButton.addEventListener("click", showNextItems);
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const showMoreButton1 = document.getElementById("showMoreButton1");
+            const showAllGame1 = document.getElementById("show__all_game1");
+
+            // Set the initial count of displayed items and the number to show at a time
+            let displayedItemCount = 12;
+            const itemsToShowAtATime = 12;
+
+            // Function to show the next set of items
+            function showNextItems() {
+                for (let i = displayedItemCount; i < displayedItemCount + itemsToShowAtATime; i++) {
+                    const item = showAllGame1.children[i];
+                    if (item) {
+                        item.style.display = "block";
+                    } else {
+                        // If there are no more items to show, hide the "Show More" button
+                        showMoreButton1.style.display = "none";
+                        break;
+                    }
+                }
+                displayedItemCount += itemsToShowAtATime;
+            }
+
+            // Initially hide all items except the first 6
+            for (let i = displayedItemCount; i < showAllGame1.children.length; i++) {
+                showAllGame1.children[i].style.display = "none";
+            }
+
+            // Add a click event listener to the "Show More" button
+            showMoreButton1.addEventListener("click", showNextItems);
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const showMoreButton2 = document.getElementById("showMoreButton2");
+            const showAllGame2 = document.getElementById("show__all_game2");
+
+            // Set the initial count of displayed items and the number to show at a time
+            let displayedItemCount = 12;
+            const itemsToShowAtATime = 12;
+
+            // Function to show the next set of items
+            function showNextItems() {
+                for (let i = displayedItemCount; i < displayedItemCount + itemsToShowAtATime; i++) {
+                    const item = showAllGame2.children[i];
+                    if (item) {
+                        item.style.display = "block";
+                    } else {
+                        // If there are no more items to show, hide the "Show More" button
+                        showMoreButton2.style.display = "none";
+                        break;
+                    }
+                }
+                displayedItemCount += itemsToShowAtATime;
+            }
+
+            // Initially hide all items except the first 6
+            for (let i = displayedItemCount; i < showAllGame2.children.length; i++) {
+                showAllGame2.children[i].style.display = "none";
+            }
+
+            // Add a click event listener to the "Show More" button
+            showMoreButton2.addEventListener("click", showNextItems);
         });
     </script>
 </body>
